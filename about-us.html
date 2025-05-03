@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Dog Adoption</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdf6e3;
+            margin: 0;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        header {
+            background-color: #fef3c7;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #f76c6c;
+            font-weight: 500;
+        }
+
+        header nav ul li a:hover {
+            color: #d83f3f;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #f76c6c;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: #d83f3f;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #fef3c7;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #f76c6c;
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+
+        footer a:hover {
+            color: #d83f3f;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #555;
+            font-size: 1.5rem;
+        }
+
+        .social-icons a:hover {
+            color: #f76c6c;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="h-24 flex items-center">
+        <div class="container mx-auto">
+            <img src="logo.png" width="150px" class="p-3"/>
+            <nav>
+                <ul class="mt-3">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="adopt.html">Adopt</a></li>
+                    <li><a href="process.html">Process</a></li>
+                    <li><a href="about-us.html">About us</a></li>
+                </ul>
+            </nav>
+            <div class="auth">
+                <a href="dashboard.html" class="mr-2">Dashboard</a>
+                <a href="dashboard.html?action=logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+            </div>
+            <div class="guest">
+                <a href="register.html" class="mr-2">Register</a>
+                <a href="login.html">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-8 bg-amber-50 p-2">
+        <div class="container mx-auto bg-image">
+            <h1>About us</h1>
+            <h3>Welcome to Pawsitive Connections - Your Trusted Dog Adoption Partner!</h3>
+            <p>At Pawsitive Connections, we believe that every dog deserves a loving home. Our mission is to connect furry friends with caring families, providing a safe haven for dogs in need and ensuring they find their forever homes. We are passionate about making a difference in the lives of dogs and their humans.</p>
+
+            <h3>Our Story</h3>
+            <p>Founded by a team of dedicated animal lovers, Pawsitive Connections was born out of the desire to create a community where every dog can thrive. We understand the challenges faced by shelters and the countless dogs waiting for adoption. With compassion and commitment, we aim to bridge the gap between these deserving dogs and potential adopters.</p>
+
+            <h3>What We Do</h3>
+            <p>Our platform offers a user-friendly experience for families looking to adopt. We showcase a variety of lovable dogs, each with their unique story and personality, helping you find the perfect match for your home. Our dedicated team works closely with local shelters and rescue organizations to ensure that every dog in our program receives the care and attention they deserve.</p>
+
+            <h3>Our Commitment</h3>
+            <p>We prioritize the well-being of our dogs and the satisfaction of our adopters. Our adoption process is thorough yet compassionate, ensuring that each family is fully prepared to welcome a new member into their lives. We provide resources and support to help you through every step of the adoption journey, from selecting a dog to preparing your home.</p>
+
+            <h3>Join Our Community</h3>
+            <p>At Pawsitive Connections, we are more than just a dog adoption platform; we are a community of animal advocates, passionate about fostering connections that lead to lasting relationships between dogs and their families. Whether you’re looking to adopt, volunteer, or simply learn more about responsible pet ownership, we invite you to join us in making a positive impact on the lives of dogs everywhere.</p>
+
+            <h3>Get Involved</h3>
+            <p>Your journey to finding a furry friend starts here! Explore our website to meet the dogs waiting for their forever homes, learn about the adoption process, and discover how you can help. Together, we can create a world where every dog is cherished, loved, and given a chance to thrive.
+                <br>
+                Thank you for choosing Pawsitive Connections. We can’t wait to help you find your new best friend!</p>
+        </div>
+    </section>
+
+    <footer class="bg-amber-100">
+        <div class="container mx-auto h-16 flex justify-between items-center" style="padding: 7px;">
+            <p>&copy; 2024 Dog Adoption. All rights reserved.</p>
+            <p>Contact us: <a href="mailto:info@dogadoption.com">info@dogadoption.com</a></p>
+            <div>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+        </div>
+    </footer>
+
+    <script type="module">
+        import {authLinks} from "./modules/App.js"
+        const isloggedin = localStorage.getItem('isloggedin') ?? false
+
+        authLinks(isloggedin)
+    </script>
+</body>
+</html>

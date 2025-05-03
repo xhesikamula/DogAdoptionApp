@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Dog Adoption</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill; 
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdf6e3;
+            margin: 0;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        header {
+            background-color: #fef3c7;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #f76c6c;
+            font-weight: 500;
+        }
+
+        header nav ul li a:hover {
+            color: #d83f3f;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #f76c6c;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: #d83f3f;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #fef3c7;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #f76c6c;
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+
+        footer a:hover {
+            color: #d83f3f;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #555;
+            font-size: 1.5rem;
+        }
+
+        .social-icons a:hover {
+            color: #f76c6c;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="h-24 flex items-center">
+        <div class="container mx-auto">
+            <img src="logo.png" width="150px" class="p-3"/>
+            <nav>
+                <ul class="mt-3">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="adopt.html">Adopt</a></li>
+                    <li><a href="process.html">Process</a></li>
+                    <li><a href="about-us.html">About us</a></li>
+                </ul>
+            </nav>
+            <div class="auth">
+                <a href="dashboard.html" class="mr-2">Dashboard</a>
+                <a href="dashboard.html?action=logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+            </div>
+            <div class="guest">
+                <a href="register.html" class="mr-2">Register</a>
+                <a href="login.html">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="slider" class="h-[600px] bg-contain bg-no-repeat bg-center">
+        <img src='https://www.rover.com/blog/wp-content/uploads/2019/04/dog-3071334_1920.jpg' alt='' />
+    </section>
+
+    <section class="py-8 bg-amber-50">
+        <div class="container mx-auto">
+            <blockquote class="italic text-lg text-amber-700 text-center mb-1">
+                "The greatness of a nation and its moral progress can be judged by the way its animals are treated." — Mahatma Gandhi
+            </blockquote>
+            <h2 class="text-2xl font-bold text-center text-amber-950">A Few of Our Available Dogs</h2>
+            <div id="dog_grid" class="grid grid-cols-4  gap-4 mt-4">
+            </div>
+            <a href="adopt.html" class="w-[200px] block mx-auto text-center py-2 border border-amber-500 text-amber-600 hover:border-amber-500 hover:bg-amber-100 hover:text-amber-800 font-semibold mt-6">Adopt one!</a>
+            <p class="text-center mt-4">If you want to know more about us <a href="about-us.html" style="text-decoration: underline;">click here.</a></p>
+        </div>
+    </section>
+
+    <footer class="bg-amber-100">
+        <div class="container mx-auto h-16 flex justify-between items-center" style="padding: 7px;">
+            <p>&copy; 2024 Dog Adoption. All rights reserved.</p>
+            <p>Contact us: <a href="mailto:info@dogadoption.com">info@dogadoption.com</a></p>
+            <div>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+        </div>
+    </footer>
+
+    <script type="module">
+        import {authLinks} from "./modules/App.js"
+        const isloggedin = localStorage.getItem('isloggedin') ?? false
+
+        const slider = document.querySelector('#slider')
+        let active_slide = 1
+        const slides = [
+            'https://www.rover.com/blog/wp-content/uploads/2019/04/dog-3071334_1920.jpg',
+            'slider1.webp',
+    
+        ]
+        const dog_grid = document.querySelector('#dog_grid');
+
+        authLinks(isloggedin)
+
+        setInterval(function(){
+            slider.innerHTML = `<img src = '${slides[active_slide]}' alt='' />`
+            
+            active_slide++
+
+            if(active_slide > (slides.length - 1)){
+                active_slide = 0
+            }
+        }, 4000)
+
+        fetch('https://api.thedogapi.com/v1/images/search?limit=12&has_breeds=1&api_key=live_wLKK0cQ7viWzknWXQ4ZEUbUdUlHt83zG6vfGi9hbrAaPITDDHM0GR3G3OWE9d8pr')
+            .then(resp => resp.json())
+            .then(dogs => {
+                
+                let dogs_html = '';
+
+                for (let dog of dogs) {
+                    const breed = dog.breeds && dog.breeds.length > 0 ? dog.breeds[0] : null;
+
+                    dogs_html += `
+                        <div class="border border-amber-200 rounded-md p-4">
+                            <div>
+                                <img src="${dog.url}" alt="Dog" class="w-full h-64 object-cover rounded-md">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <div class="flex items-center justify-between">
+                                    <h4 class="text-md font-semibold">${breed ? breed.name : 'Unknown Breed'}</h4>
+                                    </div>
+                                    <p>${breed ? breed.country_code : 'Country code not available'}</p>
+                                    <p>${breed ? `Life Span: ${breed.life_span}` : 'Life span not available'}</p>
+                                </div>
+                                <a href="dog.html?id=${dog.id}" class="w-[50px] text-center p-1 text-amber-200 border border-amber-300 
+                                hover:text-amber-800 hover:bg-amber-100
+                                font-semibold"><i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    `;
+                }
+                dog_grid.innerHTML = dogs_html;
+            })
+            .catch(error => console.error('Error fetching dog images:', error));
+    </script>
+</body>
+</html>
